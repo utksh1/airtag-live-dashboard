@@ -560,6 +560,11 @@ HTML_PAGE = """<!DOCTYPE html>
 """
 
 class RequestHandler(BaseHTTPRequestHandler):
+    def do_HEAD(self):
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.end_headers()
+
     def do_GET(self):
         urlp = urllib.parse.urlparse(self.path)
         qs = urllib.parse.parse_qs(urlp.query)

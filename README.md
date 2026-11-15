@@ -46,3 +46,4 @@ Set the environment variables below in your hosting environment:
    - Key: `DEV2_TAG_B64`
    - Value: `<base64-string>`
 6. The dashboard will automatically discover and show the new device on the map.
+
